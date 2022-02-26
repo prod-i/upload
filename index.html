@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+    <!-- BEGIN HEAD -->
+    <head>
+        <meta charset="utf-8"/>
+        <title>ТурРайд-BFS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="" name="description"/>
+        <meta content="" name="author"/>
+
+        <!-- GLOBAL MANDATORY STYLES -->
+        <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+        <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css"/>
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- PAGE LEVEL PLUGIN STYLES -->
+        <link href="css/animate.css" rel="stylesheet">
+        <link href="vendor/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>
+        <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css"/>
+
+        <!-- THEME STYLES -->
+        <link href="css/layout.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico"/>
+    </head>
+    <!-- END HEAD -->
+
+    <!-- BODY -->
+    <body id="body" data-spy="scroll" data-target=".header">
+
+        <!--========== HEADER ==========-->
+        <header class="header navbar-fixed-top">
+            <!-- Navbar -->
+            <nav class="navbar" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="menu-container js_nav-item">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="toggle-icon"></span>
+                        </button>
+
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a class="logo-wrap" href="#body">
+                                <img class="logo-img logo-img-main" src="img/logo.png" alt="Asentus Logo">
+                                <img class="logo-img logo-img-active" src="img/logo-dark.png" alt="Asentus Logo">
+                            </a>
+                        </div>
+                        <!-- End Logo -->
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse nav-collapse">
+                        <div class="menu-container">
+                            <ul class="nav navbar-nav navbar-nav-right">
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#body">Домой</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#products">Товары</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#service">Сервис</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#work">Консульация</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#pricing">Запись</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#contact">Связь</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Navbar Collapse -->
+                </div>
+            </nav>
+            <!-- Navbar -->
+        </header>
+        <!--========== END HEADER ==========-->
+
+        <!--========== SLIDER ==========-->
+        <div class="promo-block">
+            <div class="container">
+                <div class="margin-b-40">
+                    <h1 class="promo-block-title">Добро пожаловать</h1>
+                    <p class="promo-block-text">Лучший сервис по починке велосипедов в г.Владимир</p>
+                </div>
+            </div>
+        </div>
+        <!--========== SLIDER ==========-->
+
+        <!--========== PAGE LAYOUT ==========-->
+        <!-- Products -->
+        <div id="products">
+            <div class="container content-lg">
+                <div class="row text-center margin-b-40">
+                    <div class="col-sm-6 col-sm-offset-3">
+                        <h2>Наши товары</h2>
+                        <p>У нашего сервиса есть огромный ассортимент товаров для велосипедов</p>
+                    </div>
+                </div>
+                <!--// end row -->
+
+                <div class="row">
+                    <!-- Latest Products -->
+                    <div class="col-sm-4 sm-margin-b-50">
+                        <div class="margin-b-20">
+                            <img class="img-responsive wow fadeIn" src="img/970x647/01.jpg" alt="Latest Products Image" data-wow-duration=".3" data-wow-delay=".1s">
+                        </div>
+                        <h4><a href="#">Трансмисия</a> <span class="text-uppercase margin-l-20">Запчасти</span></h4>
+                        <p>Про трансмимию</p>
+                        <a class="link" href="#">Больше</a>
+                    </div>
+                    <!-- End Latest Products -->
+
+                    <!-- Latest Products -->
+                    <div class="col-sm-4 sm-margin-b-50">
+                        <div class="margin-b-20">
+                            <img class="img-responsive wow fadeIn" src="img/970x647/02.jpg" alt="Latest Products Image" data-wow-duration=".3" data-wow-delay=".2s">
+                        </div>
+                        <h4><a href="#">Колесо</a> <span class="text-uppercase margin-l-20"</span>Запчасти</h4>
+                        <p>Про колеса</p>
+                        <a class="link" href="#">Больше</a>
+                    </div>
+                    <!-- End Latest Products -->
+
+                    <!-- Latest Products -->
+                    <div class="col-sm-4 sm-margin-b-50">
+                        <div class="margin-b-20">
+                            <img class="img-responsive wow fadeIn" src="img/970x647/03.jpg" alt="Latest Products Image" data-wow-duration=".3" data-wow-delay=".2s">
+                        </div>
+                        <h4><a href="#">Рулевое управление</a> <span class="text-uppercase margin-l-20">Запчасти</span></h4>
+                        <p>Про рулевое управление</p>
+                        <a class="link" href="#">Больше</a>
+                    </div>
+                    <!-- End Latest Products -->
+
+                    <!-- Latest Products -->
+                    <div class="col-sm-4 sm-margin-b-50">
+                        <div class="margin-b-20">
+                            <img class="img-responsive wow fadeIn" src="img/970x647/04.jpg" alt="Latest Products Image" data-wow-duration=".3" data-wow-delay=".2s">
+                        </div>
+                        <h4><a href="#">Подвестка</a> <span class="text-uppercase margin-l-20">Запчасти</span></h4>
+                        <p>Про подвестку</p>
+                        <a class="link" href="#">Больше</a>
+                    </div>
+                    <!-- End Latest Products -->
+
+                    <!-- Latest Products -->
+                    <div class="col-sm-4 sm-margin-b-50">
+                        <div class="margin-b-20">
+                            <img class="img-responsive wow fadeIn" src="img/970x647/05.jpg" alt="Latest Products Image" data-wow-duration=".3" data-wow-delay=".2s">
+                        </div>
+                        <h4><a href="#">Тормозная система</a> <span class="text-uppercase margin-l-20">Запчасти</span></h4>
+                        <p>Про тормозную систему</p>
+                        <a class="link" href="#">Больше</a>
+                    </div>
+                    <!-- End Latest Products -->
+                </div>
+                <!--// end row -->
+            </div>
+
+            <div class="container-full-width">
+                <div class="row row-space-2">
+                    <div class="col-sm-6 sm-margin-b-4">
+                        <img class="img-responsive" src="img/970x647/06.jpg" alt="Image">
+                    </div>
+                    <div class="col-sm-6">
+                        <img class="img-responsive" src="img/970x647/07.jpg" alt="Image">
+                    </div>
+                </div>
+                <!--// end row -->
+            </div>
+        </div>
+        <!-- End Products -->
+
+        <!-- Service -->
+        <div id="service">
+            <div class="bg-color-sky-light" data-auto-height="true">
+                <div class="content-lg container">
+                    <div class="row row-space-2 margin-b-4">
+                        <div class="col-sm-4 sm-margin-b-4">
+                            <div class="service" data-height="height">
+                                <div class="service-element">
+                                    <i class="service-icon icon-chemistry"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3>Запчасти</h3>
+                                    <p class="margin-b-5">Все наши запчасти находяться в идеальном качестве</p>
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>    
+                            </div>
+                        </div>
+                        <div class="col-sm-4 sm-margin-b-4">
+                            <div class="service bg-color-base wow fadeInDown" data-height="height" data-wow-duration=".3" data-wow-delay=".1s">
+                                <div class="service-element">
+                                    <i class="service-icon color-white icon-screen-tablet"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3 class="color-white">Доступность</h3>
+                                    <p class="color-white margin-b-5">Цены в нашем сервесе намного выгоднее, чем у других</p>
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>    
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="service" data-height="height">
+                                <div class="service-element">
+                                    <i class="service-icon icon-badge"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3>Качество</h3>
+                                    <p class="margin-b-5">Все наши масстера- професионалы , которые делают все качественно</p>
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>    
+                            </div>
+                        </div>
+                    </div>
+                    <!--// end row -->
+
+                    <div class="row row-space-2">
+                        <div class="col-sm-4 sm-margin-b-4">
+                            <div class="service" data-height="height">
+                                <div class="service-element">
+                                    <i class="service-icon icon-notebook"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3>Консультация</h3>
+                                    <p class="margin-b-5">Если вы не уверены можете пройти бесплатную консультацию</p>
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>    
+                            </div>
+                        </div>
+                        <div class="col-sm-4 sm-margin-b-4">
+                            <div class="service" data-height="height">
+                                <div class="service-element">
+                                    <i class="service-icon icon-speedometer"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3>Скорость</h3>
+                                    <p class="margin-b-5">Быстрая скорость выполнения работы</p>
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>    
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="service" data-height="height">
+                                <div class="service-element">
+                                    <i class="service-icon icon-badge"></i>
+                                </div>
+                                <div class="service-info">
+                                    <h3>Опыт работы</h3>
+                                    <p class="margin-b-5">Все наши мастеры имеют огромный опыт работы около 10 лет</p>
+                                </div>
+                                <a href="#" class="content-wrapper-link"></a>    
+                            </div>
+                        </div>
+                    </div>
+                    <!--// end row -->
+                </div>
+            </div>
+        </div>
+        <!-- End Service -->
+
+        <!-- Promo Banner -->
+        <div class="promo-banner">
+            <div class="container-sm content-lg">
+                <h2 class="promo-banner-title">Ремонт велосипедов ТурРайд</h2>
+                <p class="promo-banner-text">Настроим скорости, прокачаем тормоза, исправим восьмерки, почистим и смажем цепь и не только</p>
+            </div>
+        </div>
+        <!-- End Promo Banner -->
+
+        <!-- Work -->
+        <div id="work">
+            <div class="content-md container">
+                <!-- Masonry Grid -->
+                <div class="masonry-grid row row-space-2">
+                    <div class="masonry-grid-sizer col-xs-6 col-sm-6 col-md-1"></div>
+                    <div class="masonry-grid-item col-xs-12 col-sm-6 col-md-8 margin-b-4">
+                        <!-- Work -->
+                        <div class="work work-popup-trigger">
+                            <div class="work-overlay">
+                                <img class="full-width img-responsive" src="img/800x400/01.jpg" alt="Portfolio Image">
+                            </div>
+                            <div class="work-popup-overlay">
+                                <div class="work-popup-content">
+                                    <a href="javascript:void(0);" class="work-popup-close">X</a>
+                                    <div class="margin-b-30">
+                                        <h3 class="margin-b-5">Алексей Дегтерев</h3>
+                                        <span>Лучший мастер</span>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                                            <div class="margin-t-10 sm-margin-t-0">
+                                                <p>Я уже около 10 лет работаю тут,и поэтому я знаю почти все про велосепеды, начиная с запчатей и заканчивая смазкой</p>
+                                                <p>Без проблем проконсултирую и посоветую, что нужно сделать</p>
+                                                <ul class="list-inline work-popup-tag">
+                                                    <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="https://vk.com/allohaalloha">VK</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Work -->
+                    </div>
+                </div>
+                <!-- End Masonry Grid -->
+            </div>
+        </div>
+        <!-- End Work -->
+
+        <!-- Pricing -->
+        <div id="pricing">
+            <div class="bg-color-sky-light">
+                <div class="content-lg container">
+                    <div class="row row-space-2">
+                        <div class="col-sm-4 sm-margin-b-4">
+                            <!-- Pricing -->
+                            <div class="pricing">
+                                <div class="margin-b-30">
+                                    <i class="pricing-icon icon-chemistry"></i>
+                                    <h3>Диагностика 500  <span>Руб</span></h3>
+                                    <p>Мы полностью про диагностируем ваш велосипед</p>
+                                </div>
+                                <ul class="list-unstyled pricing-list margin-b-50">
+                                    <li class="pricing-list-item">Длительность: 2 часа</li>
+                                    <li class="pricing-list-item">Доступная цена</li>
+                                    <li class="pricing-list-item">Сюда входит диагностика всех частей велосипеда</li>
+                                    <li class="pricing-list-item">По мимо диагностики сюда входит прочистка цепи и смазка</li>
+                                </ul>
+                                <a href="pricing1.html" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">Выбрать</a>
+                            </div>
+                            <!-- End Pricing -->
+                        </div>
+                        <div class="col-sm-4 sm-margin-b-4">
+                            <!-- Pricing -->
+                            <div class="pricing">
+                                <div class="margin-b-30">
+                                    <i class="pricing-icon icon-info"></i>
+                                    <h3>Замена запчастей</h3>
+                                    <p>Мы пожеланию клиента заменяем детали</p>
+                                </div>
+                                <ul class="list-unstyled pricing-list margin-b-50">
+                                    <li class="pricing-list-item">Свыше 150 разных запчастей</li>
+                                    <li class="pricing-list-item">Длительность зависит от запчасти и количества запчестей подлежащие замене </li>
+                                    <li class="pricing-list-item">Цена также зависит от запчасти и количества запчастей</li>
+                                </ul>
+                                <a href="pricing1.html" class="btn-theme btn-theme-sm btn-default-bg text-uppercase">Выбрать</a>
+                            </div>
+                            <!-- End Pricing -->
+                        </div>
+                    </div>
+                    <!--// end row -->
+                </div>
+            </div>
+        </div>
+        <!-- End Pricing -->
+
+        <!-- Testimonials -->
+        <div class="content-md container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <h2>Отзывы</h2>
+
+                    <!-- Swiper Testimonials -->
+                    <div class="swiper-slider swiper-testimonials">
+                        <!-- Swiper Wrapper -->
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <blockquote class="blockquote">
+                                    <div class="margin-b-20">
+                                        Прикольные ребята
+                                    </div>
+                                    <div class="margin-b-20">
+                                       
+                                    </div>
+                                    <p><span class="fweight-700 color-link">Сергей Новиков</span>, клиент</p>
+                                </blockquote>
+                            </div>
+                            <div class="swiper-slide">
+                                <blockquote class="blockquote">
+                                    <div class="margin-b-20">
+			Отлично делают парни.
+                                    </div>
+                                    <div class="margin-b-20">
+                                       Мне мой Cannondale обслужили.
+                                    </div>
+                                    <p><span class="fweight-700 color-link">Paul Sinev</span>, клиент</p>
+                                </blockquote>
+                            </div>
+                            <div class="swiper-slide">
+                                <blockquote class="blockquote">
+                                    <div class="margin-b-20">
+                                        ачень круто зделали .вел лежал почти 2 года полносью востановили .
+                                    </div>
+                                    <div class="margin-b-20">
+                                       все по красоте
+                                    </div>
+                                    <p><span class="fweight-700 color-link">Игорь Дядя</span>, клиент</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <!-- End Swiper Wrapper -->
+
+                        <!-- Pagination -->
+                        <div class="swiper-testimonials-pagination"></div>
+                    </div>
+                    <!-- End Swiper Testimonials -->
+                </div>
+            </div>
+            <!--// end row -->
+        </div>
+        <!-- End Testimonials -->
+            
+        <!-- Contact -->
+        <div id="contact">
+            <div class="work work-popup-trigger">
+                            <div class="work-overlay">
+                                <img class="full-width img-responsive" src="img/800x400/02.jpg" alt="Portfolio Image">
+                            </div>
+                            <div class="work-popup-overlay">
+                                <div class="work-popup-content">
+                                    <a href="javascript:void(0);" class="work-popup-close">X</a>
+                                    <div class="margin-b-30">
+                                        <h3 class="margin-b-5">Адрес матерской</h3>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                                            <div class="margin-t-10 sm-margin-t-0">
+                                                <p>Г.Владимир, ул.Погодина, д.9</p>
+                                                <ul class="list-inline work-popup-tag">
+                                                    <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="https://yandex.ru/maps/192/vladimir/house/ulitsa_pogodina_9/YEkYcgJhSkAEQFtsfX10d3xiYA==/?ll=40.452919%2C56.155635&z=18.1">Карта</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+            </div>
+            <!-- End Google Map -->
+        </div>
+        <!-- End Contact -->
+        <!--========== END PAGE LAYOUT ==========-->
+
+        <!--========== FOOTER ==========-->
+        <footer class="footer">
+            <!-- Links -->
+            <div class="section-seperator">
+                <div class="content-md container">
+                    <div class="row">
+                        <div class="col-sm-2 sm-margin-b-30">
+                            <!-- List -->
+                            <ul class="list-unstyled footer-list">
+                                <li class="footer-list-item"><a href="#body">Начальная страница</a></li>
+		<div class="work work-popup-trigger">
+                            <div class="work-overlay">
+                                          <li class="footer-list-item"><a href="#" >О нас</a></li>
+                            </div>
+                            <div class="work-popup-overlay">
+                                <div class="work-popup-content">
+                                    <a href="javascript:void(0);" class="work-popup-close">X</a>
+                                    <div class="margin-b-30">
+                                        <h3 class="margin-b-5">О нас</h3>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                                            <div class="margin-t-10 sm-margin-t-0">
+                                                <p>Чиним велосипеды с 2016 года, за это время отремонтировали больше 300 велосипедов. Ходим в велопоходы и ездим бреветы, а в 2018 году начали продавать велосипеды Pride.</p>
+
+			<ul class="list-inline work-popup-tag">
+                                                    <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="https://yandex.ru/maps/192/vladimir/house/ulitsa_pogodina_9/YEkYcgJhSkAEQFtsfX10d3xiYA==/?ll=40.452919%2C56.155635&z=18.1">Карта</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                       </div>
+                                    </div>
+                                </div>
+           </div>
+		<div class="work work-popup-trigger">
+                            <div class="work-overlay">
+                                            <li class="footer-list-item"><a href="#">Обратная связь</a></li>
+                            </div>
+                            <div class="work-popup-overlay">
+                                <div class="work-popup-content">
+                                    <a href="javascript:void(0);" class="work-popup-close">X</a>
+                                    <div class="margin-b-30">
+                                        <h3 class="margin-b-5">Обратная связь</h3>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                                            <div class="margin-t-10 sm-margin-t-0">
+                                                <p>+7(900)589-02-59</p>
+				<p>mail@touride.ru</p>
+                                                <ul class="list-inline work-popup-tag">
+                                                    <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="https://yandex.ru/maps/192/vladimir/house/ulitsa_pogodina_9/YEkYcgJhSkAEQFtsfX10d3xiYA==/?ll=40.452919%2C56.155635&z=18.1">Карта</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                       </div>
+                                    </div>
+                                </div>
+           </div>
+		<div class="work work-popup-trigger">
+                            <div class="work-overlay">
+                                                                          <li class="footer-list-item"><a href="#">График работы</a></li>
+                            </div>
+                            <div class="work-popup-overlay">
+                                <div class="work-popup-content">
+                                    <a href="javascript:void(0);" class="work-popup-close">X</a>
+                                    <div class="margin-b-30">
+                                        <h3 class="margin-b-5">График работы</h3>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
+                                            <div class="margin-t-10 sm-margin-t-0">
+			<p>ПН 16:00 — 19:00</p>
+			<p>ВТ 10:00 — 15:00</p>
+			<p>СР лучше позвонить </p>
+			<p>ЧТ 14:30 — 19:00</p>
+			<p>ПТ 14:00 — 19:00</p>
+			<p>СБ, ВС 11:00 — 17:00</p>
+                                                <ul class="list-inline work-popup-tag">
+                                                    <li class="work-popup-tag-item"><a class="work-popup-tag-link" href="https://yandex.ru/maps/192/vladimir/house/ulitsa_pogodina_9/YEkYcgJhSkAEQFtsfX10d3xiYA==/?ll=40.452919%2C56.155635&z=18.1">Карта</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                       </div>
+                                    </div>
+                                </div>
+           </div>
+
+
+
+                              
+                            </ul>
+                            <!-- End List -->
+                        </div>
+                        <div class="col-sm-2 sm-margin-b-30">
+                            <!-- List -->
+                            <ul class="list-unstyled footer-list">
+                                <li class="footer-list-item"><a href="https://www.instagram.com/tourride/">Instagram</a></li>
+                                <li class="footer-list-item"><a href="https://vk.com/touride">VK</a></li>
+                            </ul>
+                            <!-- End List -->
+                        </div>
+                    </div>
+                    <!--// end row -->
+                </div>
+            </div>
+            <!-- End Links -->
+
+            <!-- Copyright -->
+            <div class="content container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <img class="footer-logo" src="img/logo-dark.png" alt="Aironepage Logo">
+                    </div>
+                    <div class="col-xs-6 text-right">
+                    </div>
+                </div>
+                <!--// end row -->
+            </div>
+            <!-- End Copyright -->
+        </footer>
+        <!--========== END FOOTER ==========-->
+
+        <!-- Back To Top -->
+        <a href="javascript:void(0);" class="js-back-to-top back-to-top">&#8679;</a>
+
+        <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+        <!-- CORE PLUGINS -->
+        <script src="vendor/jquery.min.js" type="text/javascript"></script>
+        <script src="vendor/jquery-migrate.min.js" type="text/javascript"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+        <!-- PAGE LEVEL PLUGINS -->
+        <script src="vendor/jquery.easing.js" type="text/javascript"></script>
+        <script src="vendor/jquery.back-to-top.js" type="text/javascript"></script>
+        <script src="vendor/jquery.smooth-scroll.js" type="text/javascript"></script>
+        <script src="vendor/jquery.wow.min.js" type="text/javascript"></script>
+        <script src="vendor/swiper/js/swiper.jquery.min.js" type="text/javascript"></script>
+        <script src="vendor/magnific-popup/jquery.magnific-popup.min.js" type="text/javascript"></script>
+        <script src="vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
+        <script src="vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXUGTFS09pLVdsYEE9YrO2y4IAncAO2U&amp;callback=initMap" async defer></script>
+
+        <!-- PAGE LEVEL SCRIPTS -->
+        <script src="js/layout.min.js" type="text/javascript"></script>
+        <script src="js/components/wow.min.js" type="text/javascript"></script>
+        <script src="js/components/swiper.min.js" type="text/javascript"></script>
+        <script src="js/components/maginific-popup.min.js" type="text/javascript"></script>
+        <script src="js/components/masonry.min.js" type="text/javascript"></script>
+        <script src="js/components/gmap.min.js" type="text/javascript"></script>
+
+    </body>
+    <!-- END BODY -->
+</html>
